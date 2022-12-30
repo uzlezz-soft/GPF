@@ -63,7 +63,7 @@ namespace GPF
 
     Plugin* PluginsManager::Find(const std::string& name)
     {
-        auto& pair = m_loadedPlugins.find(name);
+        const auto& pair = m_loadedPlugins.find(name);
         if (pair != m_loadedPlugins.end()) return pair->second.get();
 
         for (auto& pluginPair : m_loadedPlugins)
@@ -78,7 +78,7 @@ namespace GPF
 
     void PluginsManager::Unload(const std::string& name)
     {
-        auto& pair = m_loadedPlugins.find(name);
+        const auto& pair = m_loadedPlugins.find(name);
         if (pair != m_loadedPlugins.end())
         {
             m_loadedPlugins.erase(pair);
