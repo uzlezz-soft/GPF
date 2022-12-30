@@ -24,7 +24,7 @@ namespace GPF
     {
         #ifdef GARBAGE_PLATFORM_WINDOWS
         void* handle = reinterpret_cast<void*>(LoadLibraryA(name.c_str()));
-        #elif GARBAGE_PLATFORM_LINUX
+        #elif defined(GARBAGE_PLATFORM_LINUX)
         void* handle = dlopen(name.c_str(), RTLD_LAZY);
         #else
         return nullptr;
