@@ -1,5 +1,5 @@
 # GPF
-Garbage Plugin Framework (tiny plugins system for C++)
+Garbage Plugin Framework - tiny plugins system written in C++11
 
 No, like really tiny plugins system. Right now works on Windows and Linux.
 
