@@ -49,11 +49,10 @@ if (plugin) { /* Do cool stuff */ }
 
 Also you can iterate over all loaded plugins like this
 ```cpp
-for (auto& pluginPair : manager)
+for (auto& [path, plugin] : manager)
 {
-    // pluginPair actually consists of string, which was used to load the plugin, and a pointer to the plugin instance
-    auto path = pluginPair.first; // "MyPluginFileName"
-    auto plugin = pluginPair.second; // Plugin*
+    // decltype(path) -> std::string
+    // decltype(plugin) -> GPF::Plugin*
 }
 ```
 
